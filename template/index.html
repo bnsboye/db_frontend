@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>EGO-Bank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container body-container">     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo">
+                    <h2 id="txtLOGO" class="text-white">LOGO</h2>
+                </div>
+            </div>
+            <div class="col-md-9" >
+                <div class="topic">
+                        <h1>Financial Summary</h1>
+                        <a class="logout" href="#">logout</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="container">     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="options">
+                    <h3 class="text-white">Welcome</h3>
+                    <h3 class="text-white">Name</h3>
+                    <br/><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Summary</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Transfer</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Bill Payment</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Invest</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">My Profile</button><br/>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contents">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <footer>
+    <script>
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+            // Retrieve
+            document.getElementById("user").innerHTML = sessionStorage.getItem("user");
+        } else {
+            document.getElementById("user").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+    </script>
+  </footer>
+
+  </html>

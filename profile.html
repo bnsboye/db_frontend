@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>EGO-Bank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/registration.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <div class="container body-container">     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo">
+                    <h2 id="txtLOGO" class="text-white">LOGO</h2>
+                </div>
+            </div>
+            <div class="col-md-9" >
+                <div class="topic">
+                        <h1>My Profile</h1>
+                        <a class="logout" href="/customer/loginHome.html">logout</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="container">     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="options">
+                    <h3 class="text-white">Welcome</h3>
+                    <h3 class="text-white">Name</h3>
+                    <br/><br/>
+                    <a class="btn btn-info btn-block" href="/customer/cusHome.html" role="button">Summary</a><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Transfer</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Bill Payment</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block">Invest</button><br/>
+                    <button type="button" class="btn btn btn-info btn-block" disabled>My Profile</button><br/>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contents">
+                    <div id="editform"class="row">
+                        <div class="col-md-0">
+                        </div>
+                        <div class="col-md-12">
+                          <form class="needs-validation" novalidate enctype="application/json" action="http://localhost:8080/updates/" method="post" name="myForm">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label for="firstName">First name</label>
+                                <input id="fname" type="text" class="form-control" name="fname" required>
+                                <div class="invalid-feedback">
+                                  Valid first name is required.
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="lastName">Last name</label>
+                                <input id="lname" type="text" class="form-control" name="lname" required>
+                                <div class="invalid-feedback">
+                                  Valid last name is required.
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label for="firstName">Username</label>
+                                <input id="user" type="text" class="form-control" name="user" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                  Valid first username is required.
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="lastName">Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                  Valid last password is required.
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label for="firstName">ID card</label>
+                                <input id="account_id" type="text" class="form-control" name="account_id" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                  Valid ID card is required.
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="lastName">Date of birth</label>
+                                <input id="dob" type="date" class="form-control" name="dob" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                  Valid date of birth is required.
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="row">
+                              <div class="col-md-2">
+                                <label for="gender">Gender</label>
+                                <select id="gender" class="custom-select d-block w-100" name="gender" required>
+                                  <option value="">Choose...</option>
+                                  <option value="M">Male</option>
+                                  <option value="F">Female</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid gender.
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="zip">Phone number</label>
+                                <input id="phone" type="text" class="form-control" name="phone" placeholder="" required>
+                                <div class="invalid-feedback">
+                                  Phone number required.
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="mb-3">
+                              <label for="address">Home Address</label>
+                              <textarea id="home_addr" class="form-control" rows="5" name="home_addr"required></textarea> 
+                              <div class="invalid-feedback">
+                                Please enter your Home address.
+                              </div>
+                            </div>
+                
+                            <div class="mb-3">
+                              <label for="address">Work Address</label>
+                              <textarea id="work_addr" class="form-control" rows="5" name="work_addr"required></textarea> 
+                              <div class="invalid-feedback">
+                                Please enter your Work address.
+                              </div>
+                            </div>
+                            <button class="btn btn-info btn-lg btn-block" type="submit">Confirm Edit</button>
+                          </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+  <footer>
+  <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("fname").value = obj.data[0].fname;
+            document.getElementById("lname").value = obj.data[0].lname;
+            document.getElementById("dob").value = obj.data[0].dob;
+            document.getElementById("gender").value = obj.data[0].gender;
+            document.getElementById("phone").value = obj.data[0].phone;
+            document.getElementById("home_addr").value = obj.data[0].home_addr;
+            document.getElementById("work_addr").value = obj.data[0].work_addr;
+            document.getElementById("account_id").value = obj.data[0].account_id;
+            document.getElementById("user").value = sessionStorage.getItem('id_user');
+          }
+        };
+        xhttp.open("GET", "http://localhost:8080/getuser/" + sessionStorage.getItem('id_user'), true);
+        xhttp.send();
+  </script>
+  </footer>
+  </html>
